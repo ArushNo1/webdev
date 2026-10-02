@@ -7,6 +7,7 @@
   --muted: #6b9a7a;
 
   color-scheme: dark;
+  font-family: 'Fira Code', ui-monospace, Consolas, monospace;
   line-height: 1.6;
   color: #d1d5db;
   background: var(--bg);

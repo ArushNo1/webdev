@@ -6,14 +6,9 @@ export default function Contact({ unlocked }: { unlocked: boolean }) {
   const set = (k: keyof typeof form) => (e: { target: { value: string } }) =>
     setForm({ ...form, [k]: e.target.value })
 
-  // TODO(you): decide what "send" does. There is no backend and no email
-  // address in this repo on purpose. Options to explore:
-  //   - a form service (Formspree, Web3Forms) that POSTs to their endpoint
-  //   - a serverless function that you call with fetch()
-  //   - leave it out and rely on the links above
-  // Whatever you pick, start by calling e.preventDefault() and reading `form`.
   function send(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    alert("Go to arushbodla.org if you want to send a message");
   }
 
   return (
