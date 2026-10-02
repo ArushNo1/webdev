@@ -1,10 +1,23 @@
-export default function Navbar() {
+import type { Route } from '../hooks/useHashRoute'
+
+const items: Array<[Route, string]> = [
+  ['projects', 'Projects'],
+  ['skills', 'Skills'],
+  ['challenges', 'Challenges'],
+  ['devlog', 'Devlog'],
+  ['contact', 'Contact'],
+]
+
+export default function Navbar({ route }: { route: Route }) {
   return (
     <header className="navbar">
-      <strong>Arush Bodla</strong>
+      <a href="#/" className="navbar-name">[ Arush Bodla ]</a>
       <nav>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        {items.map(([r, label]) => (
+          <a key={r} href={`#/${r}`} className={route === r ? 'active' : undefined}>
+            {label}
+          </a>
+        ))}
       </nav>
     </header>
   )

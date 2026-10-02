@@ -1,34 +1,28 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import ProjectCard, { type Project } from './components/ProjectCard'
-import Contact from './components/Contact'
-
-const projects: Project[] = [
-  {
-    name: 'RegiMon',
-    tagline: 'Real-time Windows Registry monitor that catches in-memory persistence your antivirus misses.',
-    github: 'https://github.com/ArushNo1/RegiMon',
-  },
-  {
-    name: 'Nexus',
-    tagline: "Multi-agent AI that turns a student's learning gap into a playable game.",
-    github: 'https://github.com/ArushNo1/nexus',
-  },
-]
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import Skills from './pages/Skills'
+import Challenges from './pages/Challenges'
+import Contact from './pages/Contact'
+import Devlog from './pages/Devlog'
+import { useHashRoute } from './hooks/useHashRoute'
+import { useSolved } from './hooks/useProgress'
 
 function App() {
+  const route = useHashRoute()
+  const solved = useSolved()
+
   return (
     <>
-      <Navbar />
+      <Navbar route={route} />
       <main>
-        <Hero />
-        <section id="projects" className="projects">
-          {projects.map((p) => (
-            <ProjectCard key={p.name} {...p} />
-          ))}
-        </section>
-        <Contact />
+        {route === 'home' && <Home unlocked={solved.includes(1)} />}
+        {route === 'projects' && <Projects unlocked={solved.includes(2)} />}
+        {route === 'skills' && <Skills />}
+        {route === 'challenges' && <Challenges solved={solved} />}
+        {route === 'devlog' && <Devlog />}
+        {route === 'contact' && <Contact unlocked={solved.includes(3)} />}
       </main>
     </>
   )
