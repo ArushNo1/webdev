@@ -36,6 +36,7 @@ export const devlog: DevlogEntry[] = [
       'serializing/deserializing, actually getting why they\'re used.',
       'how the `useSyncExternalStorage()` hook works. It takes a function that has startup code, processes a "call me to render" function, and returns a destructor',
       'Claude code is surprisingly stubborn on using random niche functions',
+      'how to use event listeners and the `window` variable to make tabs sync with each other when I solve a challenge',
     ],
     process: [
       'I am writing the routing logic myself.',
