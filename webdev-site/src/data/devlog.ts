@@ -33,7 +33,9 @@ export const devlog: DevlogEntry[] = [
       'How to add types into tsconfig.app.json to make sure VSCode doesn\'t trip over bun:test',
       'What a callback actually is. How to specify types and datastructures, such as Sets of functions',
       'forEach syntax, iterators, and lambda syntax',
-      'serializing/deserializing, actually getting why they\'re used.'
+      'serializing/deserializing, actually getting why they\'re used.',
+      'how the `useSyncExternalStorage()` hook works. It takes a function that has startup code, processes a "call me to render" function, and returns a destructor',
+      'Claude code is surprisingly stubborn on using random niche functions',
     ],
     process: [
       'I am writing the routing logic myself.',
