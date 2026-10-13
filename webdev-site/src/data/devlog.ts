@@ -44,4 +44,20 @@ export const devlog: DevlogEntry[] = [
       'Claude Code generated most of the HTML and CSS, since it was just distilling down my main portfolio site.',
     ],
   },
+  {
+    week: 3,
+    title: 'Advanced React',
+    assignment: 'Build the frontend of the site',
+    goal:
+      'A mini-version of my main portfolio with multiple pages, using a router hack or a router inside Vite so it is not just a single page.',
+    challenges: [
+      "Turns out I did this week's assignment last week :P",
+    ],
+    learned: [
+      'Read more carefully',
+    ],
+    process: [
+      'Using fall break to catch up on other work',
+    ],
+  },
 ]
