@@ -67,13 +67,13 @@ export const devlog: DevlogEntry[] = [
     goal:
       'Add in 3 HTTP endpoints using fastAPI to create a backend for the site.',
     challenges: [
-      "Turns out I did this week's assignment last week :P",
+      "pip is so so slow, especially over WSL -- I'm reinstalling using uv",
     ],
     learned: [
-      'Read more carefully',
+      'pip install uvicorn[standard] means to install extra dependencies named standard',
     ],
     process: [
-      '',
+      'Using this to figure out structure: https://fastapi.tiangolo.com/tutorial/first-steps/',
     ],
   },
 ]
