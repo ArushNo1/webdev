@@ -67,14 +67,23 @@ export const devlog: DevlogEntry[] = [
     goal:
       'Add in 3 HTTP endpoints using fastAPI to create a backend for the site.',
     challenges: [
-      "pip is so so slow, especially over WSL -- I'm reinstalling using uv",
-      "when I used uv, it messed up and deleted my entire backend folder",
+      "`pip` is so so slow, especially over WSL -- I'm reinstalling using `uv`",
+      "when I used `uv`, it messed up and deleted my entire backend folder",
+      "I'm using postman and trying to submit a request. I keep getting errors about malformed data and I'm trying to figure out how to give a body"
     ],
     learned: [
-      'pip install uvicorn[standard] means to install extra dependencies named standard',
+      '`pip install uvicorn[standard]` means to install extra dependencies named `standard`',
+      'you can use `Field(pattern=)` to match emails on regex',
+      'it turns out I just had tried to comment out json using double slashes (`//`), and that doesn\'t work.',
+      'postman returns errors on post bodies in interesting ways, having 422 Unprocessable Entity (WebDAV) (RFC 4918)',
+      'postman renders double slashes (`//`) on json comments instead of just erroring',
+      'using `print()` goes to the console where `uvicorn` is (idk why I expected it to come back to postman lol)',
+      'the `next(a, b)` function lets you get the first value of some iterator, or get the default `b`'
     ],
     process: [
       'Using this to figure out structure: https://fastapi.tiangolo.com/tutorial/first-steps/',
+      'Used AI to figure out what endpoint ideas to include, but trying to code everything myself',
+      'Coded the contact form by hand but the other two used AI for.'
     ],
   },
 ]
