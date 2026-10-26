@@ -60,4 +60,20 @@ export const devlog: DevlogEntry[] = [
       'Using fall break to catch up on other work',
     ],
   },
+  {
+    week: 5,
+    title: 'Adding Backend',
+    assignment: 'Create a backend for the site. ',
+    goal:
+      'Add in 3 HTTP endpoints using fastAPI to create a backend for the site.',
+    challenges: [
+      "Turns out I did this week's assignment last week :P",
+    ],
+    learned: [
+      'Read more carefully',
+    ],
+    process: [
+      '',
+    ],
+  },
 ]
