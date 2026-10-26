@@ -68,6 +68,7 @@ export const devlog: DevlogEntry[] = [
       'Add in 3 HTTP endpoints using fastAPI to create a backend for the site.',
     challenges: [
       "pip is so so slow, especially over WSL -- I'm reinstalling using uv",
+      "when I used uv, it messed up and deleted my entire backend folder",
     ],
     learned: [
       'pip install uvicorn[standard] means to install extra dependencies named standard',
